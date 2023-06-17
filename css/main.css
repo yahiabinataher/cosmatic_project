@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-headint{
+    left: 42%;
+}
+.slider_dots{
+    right: -5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.slider_dots button,.slider2_dots button{
+    font-size: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background: #D8D8D8;
+    outline: none;
+}
+.slider_dots li.slick-active button,.slider2_dots li.slick-active button {
+    background-color: orangered;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    outline: none;
+}
+.slider_dots ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.line{
+    position: relative;
+}
+.line::after{
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: -10px;
+   height: 3px;
+   width: 40%;
+   background: orangered;
+   margin-top: 10px;
+}
+.sub_menu{
+    max-height: 0;
+    overflow: hidden;
+}
+.menu_trigger.is_open{
+    color: orangered;
+}
+.menu_trigger.is_open + .sub_menu{
+    max-height: 100%;
+    overflow: visible;
+}
+.box-1{
+    position: relative;
+    height:24rem ;
+}
+.box-1 img{
+    position: absolute;
+    top: -5rem;
+}
+.box-4{
+    position: relative;
+    height: 24rem;
+    margin-top: 10rem;
+}
+.box-4 img{
+    position: absolute;
+    top: -100rem;
+    left: 15rem;
+}
+.agrre_box + label{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: white;
+    position: relative;
+    cursor: pointer;
+    border-radius: 100%;
+}
+.agrre_box + label::after{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: white;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+
+}
+.agrre_box:checked + label::after{
+    background: orangered;
+}
+.slick-slide.slick-center .inner_box{
+ padding: 0 20px;
+}
+.slider2{
+    margin-left:-50px;
+    margin-right:-50px;
+}
+.slick-slide.slick-center .inner_box > div{
+    padding: 50px 0;
+}
+.slick-slide:not(.slick-center){
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.slick-slide .inner_box .label,.slick-slide .inner_box .yahia{
+     display: none;
+}
+.slick-slide.slick-center .inner_box .label,.slick-slide .inner_box .yahia{
+     display: block;
+}
+.slider2_dots{
+    position: absolute;
+    border: -50px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.slider2_dots ul{
+    display: flex;
+    align-items: center;
+}
+.slider2_dots ul li {
+    margin-right: 20px;
+}
